@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Student</title>
+    <style>
+        body { font-family: Arial; background: #fafafa; margin: 40px; }
+        form { width: 400px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 8px #ccc; }
+        label { display: block; margin-bottom: 8px; }
+        input { width: 100%; padding: 8px; margin-bottom: 15px; }
+        button { background: #4CAF50; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+        a { display: block; text-align: center; margin-top: 15px; color: #007bff; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h2 align="center">Add New Student</h2>
+    <form th:action="@{/students/save}" th:object="${student}" method="post">
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" placeholder="Enter name" required>
+        
+        <label>Age:</label>
+        <input type="number" th:field="*{age}" placeholder="Enter age" required>
+        
+        <label>Email:</label>
+        <input type="email" th:field="*{email}" placeholder="Enter email" required>
+        
+        <button type="submit">Save</button>
+        <a href="/students">Back to List</a>
+    </form>
+</body>
+</html>
+
+
+
+<!--//without style
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Student</title>
+</head>
+<body>
+    <h2>Add New Student</h2>
+    <form th:action="@{/students/save}" th:object="${student}" method="post">
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" placeholder="Enter name" required>
+        
+        <label>Age:</label>
+        <input type="number" th:field="*{age}" placeholder="Enter age" required>
+        
+        <label>Email:</label>
+        <input type="email" th:field="*{email}" placeholder="Enter email" required>
+        
+        <button type="submit">Save</button>
+        <a href="/students">Back to List</a>
+    </form>
+</body>
+</html>-->

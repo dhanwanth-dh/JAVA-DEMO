@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome</title>
 </head>
 <body>
-    
+    <h1>Welcome</h1>
+    <p th:text="${message}">Default message will be replaced</p>
+    <!-- <div>
+        <a href="/students">Go to Students List</a>
+    </div> -->
 </body>
 </html>

@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
-public class WelcomeController {
+public class WelcomeController 
+{
     @GetMapping("/welcome")
     public String showWelcomePage(Model model) {
         model.addAttribute("message","Hello, Welcome pasangala");
         return "welcome"; //Must match Thyme Leaf template
     }
-    
 }
