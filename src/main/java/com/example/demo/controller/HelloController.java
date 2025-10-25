@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.service.HelloService;
@@ -14,9 +15,22 @@ public class HelloController
     {
         this.helloService=helloService;
     }    
-    @GetMapping("/hello")
+    /*@GetMapping("/hello")
     public String sayHello()
     {
         return helloService.getGreeting();
+    }*/
+
+    /*@GetMapping("/add")
+    public int addnum(@RequestParam int a, @RequestParam int b)
+    {
+        return helloService.add(a,b);
+    }*/
+
+    @GetMapping("/sub")
+    public int subnum(@RequestParam int a,@RequestParam int b)
+    {
+        return helloService.sub(a,b);
     }
+
 }
